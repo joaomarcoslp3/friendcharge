@@ -1,4 +1,4 @@
-import { Home } from './src/views'
+import { AppRoutes } from './src/router'
 import { useFonts } from 'expo-font'
 import AppLoading from 'expo-app-loading'
 import { theme } from './src/global/theme'
@@ -19,16 +19,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <>
       <StatusBar style='light' />
-      <Home />
-    </View>
+      <AppRoutes />
+    </>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: theme.colors.pallete.background
-  }
-})
